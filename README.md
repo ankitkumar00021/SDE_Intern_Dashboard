@@ -4,10 +4,11 @@ This project is a Next.js + TypeScript app for the SDE Frontend assignment (Pers
 
 ## Quick start
 
-1. Copy `.env.local.example` to `.env.local` and set your NewsAPI key:
+1. Copy `.env.local.example` to `.env.local` and set your NewsAPI and MovieDB API key:
 
    ```env
    NEWS_API_KEY=your_newsapi_key_here
+   OMDB_API_KEY=your_omdb_api_key_here
    ```
 
    Place your API key there — the app reads it as `process.env.NEWS_API_KEY` in server-side code. Do NOT commit `.env.local`.
@@ -26,11 +27,11 @@ I added a `src/lib/api.ts` with a `fetchNews` helper. Replace the key in `.env.l
 
 ### Demo mode (no API key)
 
-If you do not provide a `NEWS_API_KEY`, the app will automatically display a small set of demo articles from `src/lib/demoArticles.json` so you can preview the UI without an external key.
+If you do not provide a `NEWS_API_KEY` and `OMDB_API_KEY` are missing, the app will automatically display a small set of demo articles from `src/lib/demoArticles.json` so you can preview the UI without an external key.
 
 ### Server proxy for secure API use
 
-The app exposes a server-side proxy endpoint at `GET /api/news` that forwards requests to NewsAPI using the server-only `NEWS_API_KEY`. This keeps your API key secret and avoids CORS issues. To use live data, set `NEWS_API_KEY` in `.env.local`, then rebuild and restart the server. Example request (from the app):
+The app exposes a server-side proxy endpoint at `GET /api/news` and  `GET /api/movies` that forwards requests to NewsAPI and movies APIs using the server-only `NEWS_API_KEY` and `OMDB_API_KEY`. This keeps your API key secret and avoids CORS issues. To use live data, set `NEWS_API_KEY` and `OMDB_API_KEY` in `.env.local`, then rebuild and restart the server. Example request (from the app):
 
 - Client calls: `/api/news?category=technology&q=ai&page=1`
 - Server (safe) calls NewsAPI with your secret key and returns the JSON to the client.
@@ -140,6 +141,6 @@ If you want, I can prepare a short demo video and a hosted link after you run th
 
 ### Where to put the NewsAPI key (server-side)
 
-- Copy `.env.local.example` to `.env.local` and set `NEWS_API_KEY`.
-- The helper `src/lib/api.ts` reads `process.env.NEWS_API_KEY`.
+- Copy `.env.local.example` to `.env.local` and set `NEWS_API_KEY` and `OMDB_API_KEY`.
+- The helper `src/lib/api.ts` reads `process.env.NEWS_API_KEY` and `process.env.OMDB_API_KEY`
 - Do not commit `.env.local` or your API key to the repository.
