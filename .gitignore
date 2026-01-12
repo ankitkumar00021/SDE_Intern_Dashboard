@@ -2,6 +2,8 @@
 node_modules/
 .next/
 .next/cache/
+.env.local/
+next-env.d.ts/
 coverage/
 cypress/videos/
 cypress/screenshots/
@@ -12,4 +14,4 @@ build/
 .cache/
 .vscode/
 .idea/
-.env.local/
+
