@@ -2,7 +2,7 @@
 node_modules/
 .next/
 .next/cache/
-.env.local/
+.env.local
 next-env.d.ts/
 coverage/
 cypress/videos/
