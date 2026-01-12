@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-slate-900;
+}
+
+/* Dark mode defaults */
+.dark body, .dark #__next, .dark html {
+  /* these are fallbacks; prefer using dark: utilities in components */
+}

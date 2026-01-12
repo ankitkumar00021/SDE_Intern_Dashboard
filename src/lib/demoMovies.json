@@ -1,0 +1,18 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "title": "Demo Movie: The Example",
+      "overview": "An example movie used as a fallback when TMDB API key is not set.",
+      "poster_path": "https://via.placeholder.com/300x450?text=Demo+Movie",
+      "release_date": "2024-01-01"
+    },
+    {
+      "id": 2,
+      "title": "Demo Movie: Another Example",
+      "overview": "Another demo movie to show how recommendations look.",
+      "poster_path": "https://via.placeholder.com/300x450?text=Demo+Movie+2",
+      "release_date": "2023-06-15"
+    }
+  ]
+}

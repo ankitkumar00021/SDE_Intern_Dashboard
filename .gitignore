@@ -1,0 +1,14 @@
+# Common folders that should not be pushed to GitHub
+node_modules/
+.next/
+.next/cache/
+coverage/
+cypress/videos/
+cypress/screenshots/
+dist/
+out/
+build/
+.parcel-cache/
+.cache/
+.vscode/
+.idea/
